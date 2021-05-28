@@ -1,4 +1,4 @@
-class UUIDG < Formula
+class Uuidg < Formula
   desc "Generates an UUID."
   homepage "https://github.com/eduardohitek/uuidg"
   version "0.1.1"
