@@ -5,27 +5,43 @@
 class Uuidg < Formula
   desc "Generates an UUID."
   homepage "https://github.com/eduardohitek/uuidg"
-  version "0.1.2"
-  bottle :unneeded
+  version "0.1.4"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/eduardohitek/uuidg/releases/download/v0.1.2/uuidg_0.1.2_Darwin_x86_64.tar.gz"
-    sha256 "1ec8ef58259d519cff02129a654b6549ffdd39ea7ce461313fc970ff38ad7ac3"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/eduardohitek/uuidg/releases/download/v0.1.2/uuidg_0.1.2_Darwin_arm64.tar.gz"
-    sha256 "24898b0f1dd827789cb9dcf5577ca9ec7755ba47df13be97cd4b1edf8775f577"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/eduardohitek/uuidg/releases/download/v0.1.2/uuidg_0.1.2_Linux_x86_64.tar.gz"
-    sha256 "d3959cc4a01463fb2860b10371d2dd604e47fa4b6eb290961fe552af21ef5ca5"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/eduardohitek/uuidg/releases/download/v0.1.2/uuidg_0.1.2_Linux_arm64.tar.gz"
-    sha256 "ebf313006651fd13a99b4097ac75c3bdc9ee4a7fe24fee06f9f5402c97932228"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/eduardohitek/uuidg/releases/download/v0.1.4/uuidg_0.1.4_Darwin_arm64.tar.gz"
+      sha256 "05eb8149c283239212f9b20f8975c8fe8d9d80602485b5fa14a36815152ac0c8"
+
+      def install
+        bin.install "uuidg"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/eduardohitek/uuidg/releases/download/v0.1.4/uuidg_0.1.4_Darwin_x86_64.tar.gz"
+      sha256 "4faaa0a24bb9f938154d79858d53e9bf92d01ab4ab935ef5aeb22459f1d53bb1"
+
+      def install
+        bin.install "uuidg"
+      end
+    end
   end
 
-  def install
-    bin.install "uuidg"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/eduardohitek/uuidg/releases/download/v0.1.4/uuidg_0.1.4_Linux_arm64.tar.gz"
+      sha256 "521d7d69ebda71e63be1d720aa7f8351831f9101f9c7507794802cca2635ca6e"
+
+      def install
+        bin.install "uuidg"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/eduardohitek/uuidg/releases/download/v0.1.4/uuidg_0.1.4_Linux_x86_64.tar.gz"
+      sha256 "0588dbbd5da8c13c1598f01bf4cdbb6840696111e2766489fce59fadeb788037"
+
+      def install
+        bin.install "uuidg"
+      end
+    end
   end
 end
