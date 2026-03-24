@@ -3,7 +3,7 @@ cask "brag" do
   name "brag"
   desc "Automated bragdoc collector"
   homepage "https://github.com/eduardohitek/brag-cli"
-  version "0.7.1"
+  version "0.7.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "brag" do
   on_macos do
     on_intel do
       url "https://github.com/eduardohitek/brag-cli/releases/download/v#{version}/brag_#{version}_darwin_amd64.tar.gz"
-      sha256 "0481e9a5a8a7b9e10380c95a6b01a6c0de21e95fcbb023459602469841371559"
+      sha256 "22ab9c2ec505814f3dd43330bd5c8eb168478e0644229ea911e32d81c1d82adf"
     end
     on_arm do
       url "https://github.com/eduardohitek/brag-cli/releases/download/v#{version}/brag_#{version}_darwin_arm64.tar.gz"
-      sha256 "1d4c2762cdfff29190c2b48fb11d7127c7d625cdbda5b75112f1ee544d01ee37"
+      sha256 "17c30f218ebaf26fc4de6c7c267761e9bfc61b4743b4b101a6f066cf37ca99b7"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/eduardohitek/brag-cli/releases/download/v#{version}/brag_#{version}_linux_amd64.tar.gz"
-      sha256 "318dc18bb3bf8739bb6b78bbdec9aab44c5e5d4c9d52b5a84ad354a3d3c4e22f"
+      sha256 "03c023252995401b63b76b75d7d70f2fe7739369890750acfe47ef054a565594"
     end
     on_arm do
       url "https://github.com/eduardohitek/brag-cli/releases/download/v#{version}/brag_#{version}_linux_arm64.tar.gz"
-      sha256 "799d23b7b6b5452bf65ac424569b40bfb1d48623d586ee64b69048c9fb8dab91"
+      sha256 "d8a4b7b4dea5e4d26ec8c37d8391f494900afb19b6064880dd44033948e6cc5c"
     end
   end
 
