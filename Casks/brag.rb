@@ -6,25 +6,25 @@ cask "brag" do
     end
   end
 
-  version "0.10.1"
+  version "0.10.2"
 
   on_macos do
     on_arm do
-      sha256 "f829aa3db708c1e0b42e7b243ddcae40c965b67ce75184b1dc33b1a18c3b3466"
+      sha256 "737afd4841abbc3966595769faba3f0edae8a18593a4daa3c1472993c9f7d4da"
       url "https://github.com/eduardohitek/brag-cli/releases/download/v#{version}/brag_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "aa1e35c093bdc95342c8e6b07585db4ed6bb7d7e6e760bcc3ba4d898238f8bae"
+      sha256 "ae8145bd2d79dadd4bf9aa5a9bd49a9ebdb8a711177912c8303975746aeb139f"
       url "https://github.com/eduardohitek/brag-cli/releases/download/v#{version}/brag_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "25f2cc888402bff1b4f2b56ffce11230213a01db3e73f2cc8a0aa558f8a0cce6"
+      sha256 "c94c19597bf689924b9c07df3ac87ba989e7c4b02405365399ffda0baf251091"
       url "https://github.com/eduardohitek/brag-cli/releases/download/v#{version}/brag_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "13ed905c0d3c8e7d1df01cfee9f3fd809b1429627114e8cb4214c56269864d5c"
+      sha256 "33ff650b2e91207d9f137fd92c6673579c72aeed0b598a577e6a3a42be6a0b7c"
       url "https://github.com/eduardohitek/brag-cli/releases/download/v#{version}/brag_#{version}_linux_amd64.tar.gz"
     end
   end
